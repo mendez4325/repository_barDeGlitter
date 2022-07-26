@@ -39,6 +39,7 @@ body {
 }
 
 .styleTitulos{
+    color: white;
     font-family: 'Staatliches', cursive;
     font-weight: bolder;
 }
@@ -1219,3 +1220,5 @@ text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
     transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     }
+
+
