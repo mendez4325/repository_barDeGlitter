@@ -14,7 +14,6 @@ font-family: 'Staatliches', cursive;
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
 }
 
 /*se genera el reset para que se vea igual la pagina en todos los navegadores*/
@@ -25,7 +24,6 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    min-height: 100%;
 
     font-family: 'Oswald', sans-serif;
     font-weight: bolder;
@@ -35,6 +33,8 @@ body {
 
 .styleBody{
     font-family: 'Oswald', sans-serif;
+    height: 100vh;
+
 
 }
 
