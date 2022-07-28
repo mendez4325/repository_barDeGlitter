@@ -20,36 +20,159 @@
 </head>
 <body class="styleBody">
     <div class="grillaGeneralProductos">
-    <header>
-        <nav id="encabezado">   <!--Barra de navegación-->
-            <ul class="barraNav"> <!-- <ul> con los enlaces relativos -->
-                <li class="animation-Woble"><a class="animation-Flicker styleTitulos" href="../index.html">INICIO</a></li>
-                <li class="animation-Woble"><a class="animation-Flicker styleTitulos" href="productos.html">PRODUCTOS</a></li>
-                <li class="animation-Woble"><a class="animation-Flicker styleTitulos" href="nosotros.html">SOBRE NOSOTROS</a></li>
-                <li class="animation-Woble"><a class="animation-Flicker styleTitulos" href="galeria.html">GALERIA</a></li>
-                <li class="animation-Woble"><a class="animation-Flicker styleTitulos" href="contacto.html">CONTACTO</a></li>
-            </ul>
-        </nav>
-    </header>
+        <!-- NavBar -->
+        <header id="encabezado">
+            <div class= "menu-bar" >
+                <nav class="navbar navbar-expand-lg navbar-light ">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Sirena</a>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fa fa-bars"></i>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item me-5">
+                                    <a class="nav-link" href="../index.html">Inicio</a>
+                                </li>
+
+                                <li class="nav-item me-5">
+                                    <a class="nav-link" href="productos.html">Productos</a>
+                                </li>
+
+                                <li class="nav-item me-5">
+                                    <a class="nav-link" href="galeria.html">Galeria</a>
+                                </li>
+
+                                <li class="nav-item me-5">
+                                <a class="nav-link" href="nosotros.html">Nosotras</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contacto.html">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- /NavBar -->
     
         
-        <section class="grillaProductos">
-            <h1 class="animation-textSombra display-4 styleTitulos">PRODUCTOS</h1>
+      
 
-            <div class="gridProductos">
-                    <img class="styleImgProductos" src="../images/ejemplo1.jpg" alt="Maquilaje glitter">
-                    <img class="styleImgProductos" src="../images/producto2.jpg" alt="Glitter en gel, gris oscuro">
-                    <img class="styleImgProductos" src="../images/producto3.jpg" alt="Glitter en gel, gris claro">
-                    <img class="styleImgProductos" src="../images/producto4.jpg" alt="Glitter en gel, color marfil">
-                    <img class="styleImgProductos" src="../images/producto5.jpg" alt="Glitter en gel rosa">
-                    <img class="styleImgProductos" src="../images/producto6.jpg" alt="Glitter en gel violeta">
-                    <img class="styleImgProductos" src="../images/producto7.jpg" alt="Glitter en gel azul">
-                    <img class="styleImgProductos" src="../images/producto8.jpg" alt="Pack de 3 glitter en gel ">
-                    <img class="styleImgProductos" src="../images/producto9.jpg" alt="Glitter en gel especial">
-                    <img class="styleImgProductos" src="../images/producto10.jpg" alt="Glitter en gel diamante">
-                    <img class="styleImgProductos" src="../images/producto11.jpg" alt="Glitter en gel rubí">
-                    <img class="styleImgProductos" src="../images/producto12.jpg" alt="Glitter en gel pink">                
+        <section class="container-fluid grillaProductos">
+            <h1 class="animation-textSombra display-4 styleTitulos">PRODUCTOS</h1>
+            
+            <div class="row justify-content-center text-center">
+
+                <div class="card m-3 col-4" style="width: 22rem;">
+                    <img src="../images/producto1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Glitter</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">COMPRAR</button>                        
+                    </div>
+                </div> 
+                <div class="card m-3 col-4" style="width: 22rem;">
+                    <img src="../images/producto2.jpg" class="card-img-top" alt="Glitter en gel, gris oscuro">
+                    <div class="card-body">
+                        <h5 class="card-title">Glitter en gel, gris oscuro</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">COMPRAR</button>                        
+                    </div>
+                </div>
+                <div class="card m-3 col-4" style="width: 22rem;">
+                    <img src="../images/producto3.jpg" class="card-img-top" alt="Glitter en gel, gris oscuro">
+                    <div class="card-body">
+                        <h5 class="card-title">Glitter en gel, gris oscuro</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">COMPRAR</button>                        
+                    </div>
+                </div>
+                <div class="card m-3 col-4" style="width: 22rem;">
+                    <img src="../images/producto4.jpg" class="card-img-top" alt="Glitter en gel, gris oscuro">
+                    <div class="card-body">
+                        <h5 class="card-title">Glitter en gel, gris oscuro</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">COMPRAR</button>                        
+                    </div>
+                </div>
+                <div class="card m-3 col-4" style="width: 22rem;">
+                    <img src="../images/producto5.jpg" class="card-img-top" alt="Glitter en gel, gris oscuro">
+                    <div class="card-body">
+                        <h5 class="card-title">Glitter en gel, gris oscuro</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">COMPRAR</button>                        
+                    </div>
+                </div>
+                <div class="card m-3 col-4" style="width: 22rem;">
+                    <img src="../images/producto6.jpg" class="card-img-top" alt="Glitter en gel, gris oscuro">
+                    <div class="card-body">
+                        <h5 class="card-title">Glitter en gel, gris oscuro</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">COMPRAR</button>                        
+                    </div>
+                </div>
+                <div class="card m-3 col-4" style="width: 22rem;">
+                    <img src="../images/producto7.jpg" class="card-img-top" alt="Glitter en gel, gris oscuro">
+                    <div class="card-body">
+                        <h5 class="card-title">Glitter en gel, gris oscuro</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">COMPRAR</button>                        
+                    </div>
+                </div>
+                <div class="card m-3 col-4" style="width: 22rem;">
+                    <img src="../images/producto8.jpg" class="card-img-top" alt="Glitter en gel, gris oscuro">
+                    <div class="card-body">
+                        <h5 class="card-title">Glitter en gel, gris oscuro</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">COMPRAR</button>                        
+                    </div>
+                </div>
+                <div class="card m-3 col-4" style="width: 22rem;">
+                    <img src="../images/producto9.jpg" class="card-img-top" alt="Glitter en gel, gris oscuro">
+                    <div class="card-body">
+                        <h5 class="card-title">Glitter en gel, gris oscuro</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">COMPRAR</button>                        
+                    </div>
+                </div>
+                <div class="card m-3 col-4" style="width: 22rem;">
+                    <img src="../images/producto11.jpg" class="card-img-top" alt="Glitter en gel, gris oscuro">
+                    <div class="card-body">
+                        <h5 class="card-title">Glitter en gel, gris oscuro</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">COMPRAR</button>                        
+                    </div>
+                </div>
+                <div class="card m-3 col-4" style="width: 22rem;">
+                    <img src="../images/producto11.jpg" class="card-img-top" alt="Glitter en gel, gris oscuro">
+                    <div class="card-body">
+                        <h5 class="card-title">Glitter en gel, gris oscuro</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">COMPRAR</button>                        
+                    </div>
+                </div>
+                <div class="card m-3 col-4" style="width: 22rem;">
+                    <img src="../images/producto12.jpg" class="card-img-top" alt="Glitter en gel, gris oscuro">
+                    <div class="card-body">
+                        <h5 class="card-title">Glitter en gel, gris oscuro</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">COMPRAR</button>                        
+                    </div>
+                </div>
+            
             </div>
+        </section>
+            
+        
+        
+        
+        
         </section>
 
         <section class="grillaMensajes ">
@@ -98,7 +221,26 @@
                 © 2022 Copyright:<a class="text-white" href="https://mdbootstrap.com/">SIRENA BAR DE GLITTER</a>
             </div>
             <!-- Copyright -->
-        </footer>    
+        </footer>
+    </div>
+     <!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h8 class="modal-title" id="exampleModalLabel">            Lo sentimos. El carrito aun no esta disponible
+        </h8>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  >
+          </div>    
         
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     
@@ -106,84 +248,7 @@
     <script>
         AOS.init();
     </script>
-</div>
+
 </body>
 </html>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
-    <title>Productos</title>
-</head>
-<body>
-    <div class="grillaGeneralProductos">
-    <header>
-        <nav id="encabezado">   <!--Barra de navegación-->
-            <ul class="barraNav"> <!-- <ul> con los enlaces relativos -->
-                <li class="animation-Woble"><a class="animation-Flicker" href="../index.html">INICIO</a></li>
-                <li class="animation-Woble"><a class="animation-Flicker" href="productos.html">PRODUCTOS</a></li>
-                <li class="animation-Woble"><a class="animation-Flicker" href="nosotros.html">SOBRE NOSOTROS</a></li>
-                <li class="animation-Woble"><a class="animation-Flicker" href="galeria.html">GALERIA</a></li>
-                <li class="animation-Woble"><a class="animation-Flicker" href="contacto.html">CONTACTO</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    
-        <section class="grillaProductos">
-            <h1 class="animation-textSombra">PRODUCTOS</h1>
-
-            <div class="gridProductos">
-                    <img class="styleImgProductos" src="../images/ejemplo1.jpg" alt="Maquilaje glitter">
-                    <img class="styleImgProductos" src="../images/producto2.jpg" alt="Glitter en gel, gris oscuro">
-                    <img class="styleImgProductos" src="../images/producto3.jpg" alt="Glitter en gel, gris claro">
-                    <img class="styleImgProductos" src="../images/producto4.jpg" alt="Glitter en gel, color marfil">
-                    <img class="styleImgProductos" src="../images/producto5.jpg" alt="Glitter en gel rosa">
-                    <img class="styleImgProductos" src="../images/producto6.jpg" alt="Glitter en gel violeta">
-                    <img class="styleImgProductos" src="../images/producto7.jpg" alt="Glitter en gel azul">
-                    <img class="styleImgProductos" src="../images/producto8.jpg" alt="Pack de 3 glitter en gel ">
-                    <img class="styleImgProductos" src="../images/producto9.jpg" alt="Glitter en gel especial">
-                    <img class="styleImgProductos" src="../images/producto10.jpg" alt="Glitter en gel diamante">
-                    <img class="styleImgProductos" src="../images/producto11.jpg" alt="Glitter en gel rubí">
-                    <img class="styleImgProductos" src="../images/producto12.jpg" alt="Glitter en gel pink">                
-            </div>
-        </section>
-        
-        <section class="grillaMensajes">
-            <div class="gridMensajes">
-                <div class="divTextoProductos"><p>ENVÍO GRATIS A COMPRAS MAYORES A $5000<br>Entregas a todo el país</p></div>
-                <div class="divTextoProductos"><p>PAGÁ COMO QUIERAS<br>Tarjetas de crédito o efectivo </p></div>
-                <div class="divTextoProductos"><p>SITIO SEGURO<br>Tus datos siempre protegidos</p></div>
-            </div>
-        </section>
-
-        <aside>   
-            <div class="irAlEncabezado"><a class="animation-irAlEncabezado"  href="#encabezado">Ir al encabezado</a></div>
-        </aside>
-    </main>
-
-    <footer>
-        <h6 data-aos="zoom-in">Acá tenemos las redes sociales</h6>
-        <ul class="redesSociales"> <!--<ul> con los enlaces absolutos. Proximamente se crearán las redes -->
-            <li class="shake-slow"><a href="http://" target="_blank">Instagram</a></li>
-            <li class="shake-slow"><a href="http://" target="_blank">TikTok</a></li>
-            <li class="shake-slow"><a href="http://" target="_blank">WhatsApp</a></li>
-            <li class="shake-slow"><a href="http://" target="_blank">Facebook</a></li>
-        </ul>
-    </footer>
-    </div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-</body>
-</html>
