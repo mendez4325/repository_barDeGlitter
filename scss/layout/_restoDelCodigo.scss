@@ -1,49 +1,33 @@
 /*
-****PALETA DE COLORES****
-#E8A0BF
-#A760FF
-#4C0070
-
 ****MIS FUENTES****
 font-family: 'Oswald', sans-serif;
 font-family: 'Staatliches', cursive;
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&family=Staatliches&display=swap'); /*llamado a las tipografias por css*/
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-/*se genera el reset para que se vea igual la pagina en todos los navegadores*/
-
-/***************MOBILE FIRST*******************/
 
 
 
-.titulo p{
-    font-size: 2rem;
-    color: white;
+.titulo {
+    p{
+        font-size: 2rem;
+        color: $color-white;
+    }
 }
 
 .styleBody{
     font-family: 'Oswald', sans-serif;
     height: 100vh;
-    display: flex;
     flex-direction: column;
     text-align: center;
-
-    font-family: 'Oswald', sans-serif;
+    font-family: $ff-body;
     font-weight: bolder;
-    background-color: #E8A0BF;
+    background-color: $color-pink;
 }
 
 
 .styleTitulos{
-    color: white;
-    font-family: 'Staatliches', cursive;
+    color: $color-white;
+    font-family: $ff-headings;
     font-weight: bolder;
 }
 
@@ -100,49 +84,32 @@ footer{
 }
 
 
-.masVendidos{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 2fr;
-    gap: 15px;
-    justify-items: center;
+.slide {
+    img {
+        height: 50vh;
+        
+    }    
 }
 
-
-
-
-.slide img {
-    height: 50vh;
-    
-}
 
 .accordion-item{
-    font-family: 'Staatliches', cursive;
-    color: white;
+    font-family: $ff-headings;
+    color: $color-white;
 }
 
 
 /*-----------------------------------------------------------------------------------------------MAIN---------*/
 
 h1, h2, h3, h4, h5 {
-    color: white;
+    color: $color-white;
     font-size: 2.5em;
     padding: 25px;
     text-align: center;
-    border: 3px white solid;
+    border: 3px $color-white solid;
     border-radius: 75px;
     margin: 20px 0px 20px 0px;
-    background-color: #A760FF;
+    background-color: $color-violet-light;
 }
-
-/*border: tiene que tener 3 calores MEDIDA-TIPO DE BORDE-COLOR */
-
-/*
-img{
-    border: 8px solid #A760FF;
-    margin-top: 15px;
-}*/
-
 
 
 .masVendidos {
@@ -152,47 +119,25 @@ img{
     justify-items: center;
     gap: 10px;
 
-    color: white;
+    color: $color-white;
     font-weight: bold;
+
+    img {
+        width: 45%;
+    }
 }
 
 
 .styleImgMasVendidos{
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
 }
 
-.masVendidos img {
-    width: 45%;
-}
-
-
-/*
-las class se llaman por un . (punto)
-font weight: bold es para ponerlo en negrita
-*/
-
-/*
-.divfotoPrincipal {
-    display: flex;
-    justify-content: center;
-}
-
-.styleFotoPrincipal{
-    width: 55%;
-    height: 10%;
-    margin: 0 3px 0 3px ;
-
-}
-/*los id sirven para destacar solo 1. No es repetible */
 
 .divTutorial{
-    display: flex;
-    justify-content: center;
+    @include flex-center
 }
-
 
 
 iframe {
@@ -205,82 +150,43 @@ iframe {
 h5 {
     text-align: center;
     border-radius: 0;
-    background-color: #4C0070;
+    background-color: $color-violet;
     margin-left: 3px;
     margin-right: 3px;
 }
 
 
 
-.accordion-button:enabled{
-    background-color: #4C0070;
-    color: white;
-    text-decoration: none;
-   
+.accordion-button{
+    &:enabled{
+        background-color: $color-violet;
+        color: $color-white;
+        text-decoration: none;
+    }
 }
 
 
 .accordion-body{
-    background-color: #A760FF;
+    background-color: $color-violet-light;
 }
 /*---------------------------------------------------------------------------------------IR AL ENCABEZADO----------*/
 
 .irAlEncabezado {
-    text-align: right;
-    margin-top: 25px ;
-}
-
-
-aside .irAlEncabezado a{
-    font-size: 2em ;
-    text-decoration: none;
-    list-style: none;
-    color: white;
-}
-
-
-
-/*----------------------------------------------------------------------------------FOOTER----------*/  
-
-
-
-
-footer {
-    background-color: #E8A0BF;
-    padding: 25px;
-    margin: 0 1px 0 1px;
-}
-
-
-
-
-.redesSociales {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    font-family: 'Staatliches', cursive;
     text-align: center;
+    margin-top: 25px ;
+
+    a{
+        font-size: 2em ;
+        text-decoration: none;
+        list-style: none;
+        color: $color-white;
+    }
 }
 
 
 
-.redesSociales li {
-    padding: 10px;
-    border: 5px double white;
-    background-image: url(../images/fondoSirena.jpg);
 
 
-}
-
-
-.redesSociales li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1.5em;
-}
 /**************************************************************************************--MEDIA QUERYS--*****************************************************************************************************************/
 
 @media (min-width:768px) {
@@ -291,17 +197,12 @@ footer {
         grid-template-columns: 1fr 1fr;
         height: auto;
         margin: 0;
+
+        img {
+            width: 60%;
+        }
     }
 
-
-    .barraNav {
-        justify-content: space-between;
-    }
-
-
-    .barraNav li a {
-        font-size: 1.8em;
-    }
     
 
     h5 {
@@ -309,22 +210,16 @@ footer {
     }
     
 
-    .preguntasFrecuentes div {
-        text-align: right;
+    .preguntasFrecuentes{
+        
+        div {
+            text-align: right;
+        }
     }
 
 
     .irAlEncabezado {
         text-align: center;
-    }
-    
-
-    .redesSociales {
-        justify-content: space-evenly;
-    }
-
-    .masVendidos img {
-        width: 60%;
     }
 }
 
@@ -350,20 +245,13 @@ footer {
         border: 5px solid white;
     }
 
-    .titulo p{ 
-        color: white
-    
+    .titulo {
+        p{ 
+            color: white
+        
+        }
     }
 
-    .barraNav {
-        justify-content: space-evenly;
-    }
-
-
-    .barraNav li a {
-        font-size: 2.3em;
-    }
-    
 
     h5 {
         text-align: left;
@@ -379,24 +267,17 @@ footer {
     }
 
 
-    .preguntasFrecuentes div {
-        text-align: left;
+    .preguntasFrecuentes {
+        div {
+            text-align: left;
+        }
     }
 
 
     .irAlEncabezado {
         text-align: right;
     }
-    
 
-    .redesSociales {
-        justify-content: space-evenly;
-    }
-
-
-    .redesSociales li a {
-        font-size: 2.5em;
-    }
 
     h6{
         font-size: 2.5em;
@@ -429,22 +310,21 @@ footer {
 
 
 .divTextoProductos  {
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #A760FF;
-    border: 3px solid white;
+    background-color: $color-violet-light;
+    border: 3px solid $color-white;
     height: 200px;
     width: 300px;
 }
 
-.divTextoProductos p{
-    color: white;
-    font-size: 1.5em;
-    
+.divTextoProductos{
+    p{
+        color: $color-white;
+        font-size: 1.5em;
+        
+    }    
 }
-
 
 .grillaGeneralProductos{
     display: grid;
@@ -475,22 +355,17 @@ footer{
 }
 
 .card{
-    display: flex;
-    justify-content: center;
-    background-color:#E8A0BF!important;
+    @include flex-center;
+    background-color: $color-pink!important;
     border: none!important;
 }
-.card-body p{
-text-align: center;
+.card-body{
+    p & button{
+        text-align: center;
+    }
 }
 
-.card-body button{
-text-align: center;}
 
-
-.card-img-top{
-    border: #4C0070 1px solid;
-}
 @media (min-width:768px){
 
     .gridProductos{
@@ -499,11 +374,11 @@ text-align: center;}
         grid-template-columns: 1fr 1fr;
         height: auto;
         margin: 0;
-    }
 
-    .gridProductos img{
-        width: 75%;
-        height: 85%;
+        img{
+            width: 75%;
+            height: 85%;
+        }
     }
 }
 
@@ -512,12 +387,14 @@ text-align: center;}
 
     .gridProductos{
     grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        img{
+            width: 90%;
+            height: 90%;
+        }
     }
 
-    .gridProductos img{
-        width: 90%;
-        height: 90%;
-    }
+    
 
     .gridMensajes{
         grid-template-columns: repeat(3,1fr);
@@ -526,11 +403,11 @@ text-align: center;}
 }
 
 .buttonProductos{
-    background-color: black;
+    background-color: $color-black;
 }
 
 .card-title{
-    background-color:#A760FF ;
+    background-color: $color-violet-light ;
 }
 
 .card-img-top{
@@ -561,20 +438,19 @@ text-align: center;}
     grid-template-rows: 1fr;
     gap: 15px;
     justify-items: center;
+
+    img {
+        width: 55%;
+        }
 }
 
 
 .styleImgGaleria{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+    @include flex-center;
+    flex-direction: column;
+}
 
 
-.gridGaleria img {
-    width: 55%;
-    }
 
 
 @media (min-width:768px){
@@ -585,11 +461,13 @@ text-align: center;}
         grid-template-columns: 1fr 1fr;
         height: auto;
         margin: 0;
+
+        img{
+            width: 75%;
+        }
     }
 
-    .gridGaleria img{
-        width: 75%;
-    }
+    
 }
 
 
@@ -597,12 +475,11 @@ text-align: center;}
 
     .gridGaleria{
     grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .gridGaleria img{
+    
+    img{
         width: 90%;
     }
-
+    }
 }
 
 
@@ -625,74 +502,73 @@ text-align: center;}
 .divSobreNosotros{
     grid-area: parrafos;
 
+    p{
+        text-align: center;
+        color: $color-white;
+    }
 }
 
 .divImgSobreNosotros{
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;    
     grid-area: imagenes;
+
+    img {
+        justify-self: center;
+        width: 50%;
+        height: 50%;
+    }
 }
 
 .styleImgSobreNosotros{
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
-.divSobreNosotros p{
-    text-align: center;
-    color: white;
-}
 
-.divImgSobreNosotros img {
-    justify-self: center;
-    width: 50%;
-    height: 50%;
-    
-}
+
+
 
 @media (min-width:768px){
 
-    .divImgSobreNosotros img{
-        width: 60%;
+    .divImgSobreNosotros {
+        img{
+            width: 60%;
+        }
     }
 }
 
 
 @media (min-width:1024px){
 
-    .divImgSobreNosotros img{
-        width: 40%;
+    .divImgSobreNosotros {
+        img{
+            width: 40%;
+        }
     }
 
 }
 /*------------------------------------------CONTACTO-----------------S*/
 
 .sectionContactos{
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    justify-content: center;
-    
 }
 
 
 .divContacto {
-text-align: center;    color: white;
-    background-color: #A760FF;
+    text-align: center;    
+    color: $color-white;
+    background-color: $color-violet-light;
     font-weight: bold;
     font-size: 20px;
-    border: 3px solid white;
+    border: 3px solid $color-white;
     padding: 30px;
     margin: 15px 10px 0 10px;
 }
 
 .grillaGeneralContactos{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
     gap: 20px;
     grid-template-areas: 
                         "header"
@@ -707,34 +583,13 @@ text-align: center;    color: white;
     grid-area: sectionContactos;
 }
 
-.form{
+.divForm{
     grid-area: form;
-    color: white;
 }
 
-
-
-/*.flex-container { 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #E8A0BF;
-    padding: 30px;
-    height: 250px;
+.form{
+    color: $color-white;
 }
-
-
-.flex-container div {
-    background-color: #A760FF;
-    padding: 20px;
-    margin: 10px;
-}*/
-
-
-/*CON LA CONSOLA SE PUEDE VER MAS CLARO los diferentes tipos de flex-direction*/
-
 
 
 /*******************ANIMACIONES*****************/

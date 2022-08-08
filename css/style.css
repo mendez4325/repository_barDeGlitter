@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&family=Staatliches&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/*llamado a las tipografias por css*/
 .navbar-brand {
   font-family: 'Pacifico', cursive;
   font-size: 3rem !important;
@@ -13,6 +19,9 @@ header {
 
 .menu-bar {
   background: linear-gradient(-90deg, #e8a0bf 14%, #a760ff 100%); }
+  .menu-bar .navbar-toggler {
+    outline: none !important;
+    border: none !important; }
 
 .nav-link {
   font-size: 30px;
@@ -28,10 +37,6 @@ header {
   .nav-link:hover {
     border-bottom: white 1px solid; } }
 
-.menu-bar .navbar-toggler {
-  outline: none !important;
-  border: none !important; }
-
 .navbar .fa {
   color: white;
   font-size: 26px; }
@@ -40,22 +45,10 @@ header {
   border: none !important; }
 
 /*
-****PALETA DE COLORES****
-#E8A0BF
-#A760FF
-#4C0070
-
 ****MIS FUENTES****
 font-family: 'Oswald', sans-serif;
 font-family: 'Staatliches', cursive;
 */
-/*llamado a las tipografias por css*/
-* {
-  margin: 0;
-  padding: 0; }
-
-/*se genera el reset para que se vea igual la pagina en todos los navegadores*/
-/***************MOBILE FIRST*******************/
 .titulo p {
   font-size: 2rem;
   color: white; }
@@ -63,16 +56,15 @@ font-family: 'Staatliches', cursive;
 .styleBody {
   font-family: 'Oswald', sans-serif;
   height: 100vh;
-  display: flex;
   flex-direction: column;
   text-align: center;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: bolder;
   background-color: #E8A0BF; }
 
 .styleTitulos {
   color: white;
-  font-family: 'Staatliches', cursive;
+  font-family: "Staatliches", cursive;
   font-weight: bolder; }
 
 /*---------------------------------------GRID AREA*/
@@ -106,18 +98,11 @@ footer {
   grid-area: footer;
   background-image: url(../images/fondoSirena.jpg); }
 
-.masVendidos {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 2fr;
-  gap: 15px;
-  justify-items: center; }
-
 .slide img {
   height: 50vh; }
 
 .accordion-item {
-  font-family: 'Staatliches', cursive;
+  font-family: "Staatliches", cursive;
   color: white; }
 
 /*-----------------------------------------------------------------------------------------------MAIN---------*/
@@ -131,12 +116,6 @@ h1, h2, h3, h4, h5 {
   margin: 20px 0px 20px 0px;
   background-color: #A760FF; }
 
-/*border: tiene que tener 3 calores MEDIDA-TIPO DE BORDE-COLOR */
-/*
-img{
-    border: 8px solid #A760FF;
-    margin-top: 15px;
-}*/
 .masVendidos {
   display: grid;
   grid-template-columns: 1fr;
@@ -145,36 +124,19 @@ img{
   gap: 10px;
   color: white;
   font-weight: bold; }
+  .masVendidos img {
+    width: 45%; }
 
 .styleImgMasVendidos {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  flex-direction: column; }
 
-.masVendidos img {
-  width: 45%; }
-
-/*
-las class se llaman por un . (punto)
-font weight: bold es para ponerlo en negrita
-*/
-/*
-.divfotoPrincipal {
-    display: flex;
-    justify-content: center;
-}
-
-.styleFotoPrincipal{
-    width: 55%;
-    height: 10%;
-    margin: 0 3px 0 3px ;
-
-}
-/*los id sirven para destacar solo 1. No es repetible */
 .divTutorial {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
 
 iframe {
   width: 70%; }
@@ -197,40 +159,13 @@ h5 {
 
 /*---------------------------------------------------------------------------------------IR AL ENCABEZADO----------*/
 .irAlEncabezado {
-  text-align: right;
+  text-align: center;
   margin-top: 25px; }
-
-aside .irAlEncabezado a {
-  font-size: 2em;
-  text-decoration: none;
-  list-style: none;
-  color: white; }
-
-/*----------------------------------------------------------------------------------FOOTER----------*/
-footer {
-  background-color: #E8A0BF;
-  padding: 25px;
-  margin: 0 1px 0 1px; }
-
-.redesSociales {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  font-family: 'Staatliches', cursive;
-  text-align: center; }
-
-.redesSociales li {
-  padding: 10px;
-  border: 5px double white;
-  background-image: url(../images/fondoSirena.jpg); }
-
-.redesSociales li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 1.5em; }
+  .irAlEncabezado a {
+    font-size: 2em;
+    text-decoration: none;
+    list-style: none;
+    color: white; }
 
 /**************************************************************************************--MEDIA QUERYS--*****************************************************************************************************************/
 @media (min-width: 768px) {
@@ -240,20 +175,14 @@ footer {
     grid-template-columns: 1fr 1fr;
     height: auto;
     margin: 0; }
-  .barraNav {
-    justify-content: space-between; }
-  .barraNav li a {
-    font-size: 1.8em; }
+    .masVendidos img {
+      width: 60%; }
   h5 {
     text-align: right; }
   .preguntasFrecuentes div {
     text-align: right; }
   .irAlEncabezado {
-    text-align: center; }
-  .redesSociales {
-    justify-content: space-evenly; }
-  .masVendidos img {
-    width: 60%; } }
+    text-align: center; } }
 
 @media (min-width: 1024px) {
   .masVendidos {
@@ -269,10 +198,6 @@ footer {
     border: 5px solid white; }
   .titulo p {
     color: white; }
-  .barraNav {
-    justify-content: space-evenly; }
-  .barraNav li a {
-    font-size: 2.3em; }
   h5 {
     text-align: left; }
   iframe {
@@ -282,10 +207,6 @@ footer {
     text-align: left; }
   .irAlEncabezado {
     text-align: right; }
-  .redesSociales {
-    justify-content: space-evenly; }
-  .redesSociales li a {
-    font-size: 2.5em; }
   h6 {
     font-size: 2.5em;
     margin-bottom: 20px; }
@@ -308,9 +229,9 @@ footer {
 
 .divTextoProductos {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-color: #A760FF;
   border: 3px solid white;
   height: 200px;
@@ -340,17 +261,12 @@ footer {
 .card {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #E8A0BF !important;
   border: none !important; }
 
-.card-body p {
+p .card-body button {
   text-align: center; }
-
-.card-body button {
-  text-align: center; }
-
-.card-img-top {
-  border: #4C0070 1px solid; }
 
 @media (min-width: 768px) {
   .gridProductos {
@@ -359,16 +275,16 @@ footer {
     grid-template-columns: 1fr 1fr;
     height: auto;
     margin: 0; }
-  .gridProductos img {
-    width: 75%;
-    height: 85%; } }
+    .gridProductos img {
+      width: 75%;
+      height: 85%; } }
 
 @media (min-width: 1024px) {
   .gridProductos {
     grid-template-columns: 1fr 1fr 1fr 1fr; }
-  .gridProductos img {
-    width: 90%;
-    height: 90%; }
+    .gridProductos img {
+      width: 90%;
+      height: 90%; }
   .gridMensajes {
     grid-template-columns: repeat(3, 1fr); } }
 
@@ -396,15 +312,14 @@ footer {
   grid-template-rows: 1fr;
   gap: 15px;
   justify-items: center; }
+  .gridGaleria img {
+    width: 55%; }
 
 .styleImgGaleria {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center; }
-
-.gridGaleria img {
-  width: 55%; }
+  align-items: center;
+  flex-direction: column; }
 
 @media (min-width: 768px) {
   .gridGaleria {
@@ -413,14 +328,14 @@ footer {
     grid-template-columns: 1fr 1fr;
     height: auto;
     margin: 0; }
-  .gridGaleria img {
-    width: 75%; } }
+    .gridGaleria img {
+      width: 75%; } }
 
 @media (min-width: 1024px) {
   .gridGaleria {
     grid-template-columns: 1fr 1fr 1fr; }
-  .gridGaleria img {
-    width: 90%; } }
+    .gridGaleria img {
+      width: 90%; } }
 
 /*-------------------------------------------------------------------SOBRE NOSOTROS----------*/
 .grillaGeneralSobreNosotros {
@@ -432,28 +347,26 @@ footer {
 
 .divSobreNosotros {
   grid-area: parrafos; }
+  .divSobreNosotros p {
+    text-align: center;
+    color: white; }
 
 .divImgSobreNosotros {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   grid-area: imagenes; }
+  .divImgSobreNosotros img {
+    justify-self: center;
+    width: 50%;
+    height: 50%; }
 
 .styleImgSobreNosotros {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center; }
-
-.divSobreNosotros p {
-  text-align: center;
-  color: white; }
-
-.divImgSobreNosotros img {
-  justify-self: center;
-  width: 50%;
-  height: 50%; }
+  align-items: center;
+  flex-direction: column; }
 
 @media (min-width: 768px) {
   .divImgSobreNosotros img {
@@ -466,8 +379,9 @@ footer {
 /*------------------------------------------CONTACTO-----------------S*/
 .sectionContactos {
   display: flex;
-  flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
 
 .divContacto {
   text-align: center;
@@ -493,24 +407,6 @@ footer {
   grid-area: form;
   color: white; }
 
-/*.flex-container { 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #E8A0BF;
-    padding: 30px;
-    height: 250px;
-}
-
-
-.flex-container div {
-    background-color: #A760FF;
-    padding: 20px;
-    margin: 10px;
-}*/
-/*CON LA CONSOLA SE PUEDE VER MAS CLARO los diferentes tipos de flex-direction*/
 /*******************ANIMACIONES*****************/
 /*HEADER*/
 .animation-Flicker:hover {
